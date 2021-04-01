@@ -1,0 +1,231 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>【算法】电话号码的字母组合 | Gridea</title>
+<link rel="shortcut icon" href="https://fyhub.github.io/favicon.ico?v=1617275105187">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fyhub.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="【算法】电话号码的字母组合 | Gridea - Atom Feed" href="https://fyhub.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+title: 【算法】电话号码的字母组合
+题目
+给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+
+示例 1：
+输入：d..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://fyhub.github.io">
+  <img class="avatar" src="https://fyhub.github.io/images/avatar.png?v=1617275105187" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              【算法】电话号码的字母组合
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-04-01
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <hr>
+<h2 id="title-算法电话号码的字母组合">title: 【算法】电话号码的字母组合</h2>
+<h1 id="题目">题目</h1>
+<p>给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。</p>
+<p>给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。<br>
+<img src="https://fyhub.github.io/post-images/1617275101520.png" alt="" loading="lazy"></p>
+<p>示例 1：</p>
+<pre><code>输入：digits = &quot;23&quot;
+输出：[&quot;ad&quot;,&quot;ae&quot;,&quot;af&quot;,&quot;bd&quot;,&quot;be&quot;,&quot;bf&quot;,&quot;cd&quot;,&quot;ce&quot;,&quot;cf&quot;]
+</code></pre>
+<p>示例 2：</p>
+<pre><code>输入：digits = &quot;&quot;
+输出：[]
+</code></pre>
+<p>示例 3：</p>
+<pre><code>输入：digits = &quot;2&quot;
+输出：[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]
+</code></pre>
+<h1 id="题解">题解</h1>
+<pre><code class="language-javascript">/**
+ * @param {string} digits
+ * @return {string[]}
+ */
+const numMap = {
+    '2': 'abc',
+    '3': 'def',
+    '4': 'ghi',
+    '5': 'jkl',
+    '6': 'mno',
+    '7': 'pqrs',
+    '8': 'tuv',
+    '9': 'wxyz'
+}
+var letterCombinations = function(digits) {
+    const res = []
+    if (!digits) return res
+    function func(index, temp) {
+        if (index &gt;= digits.length) {
+            res.push(temp)
+            return
+        }
+        const d = digits[index]
+        const str = numMap[d]
+        for (let i = 0;i &lt; str.length;i++) {
+            func(index + 1, temp + str[i])
+        }
+    }
+    func(0, '')
+    return res
+};
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#title-%E7%AE%97%E6%B3%95%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88">title: 【算法】电话号码的字母组合</a></li>
+</ul>
+</li>
+<li><a href="#%E9%A2%98%E7%9B%AE">题目</a></li>
+<li><a href="#%E9%A2%98%E8%A7%A3">题解</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://fyhub.github.io/post/suan-fa-fen-ge-hui-wen-chuan/">
+              <h3 class="post-title">
+                【算法】分割回文串
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://fyhub.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

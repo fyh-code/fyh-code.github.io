@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://fyhub.github.io</id>
+    <id>https://fyhub1.github.io</id>
     <title>Gridea</title>
-    <updated>2021-04-02T02:31:39.648Z</updated>
+    <updated>2021-04-02T03:00:26.191Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://fyhub.github.io"/>
-    <link rel="self" href="https://fyhub.github.io/atom.xml"/>
+    <link rel="alternate" href="https://fyhub1.github.io"/>
+    <link rel="self" href="https://fyhub1.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://fyhub.github.io/images/avatar.png</logo>
-    <icon>https://fyhub.github.io/favicon.ico</icon>
+    <logo>https://fyhub1.github.io/images/avatar.png</logo>
+    <icon>https://fyhub1.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[【算法】电话号码的字母组合]]></title>
-        <id>https://fyhub.github.io/post/suan-fa-dian-hua-hao-ma-de-zi-mu-zu-he/</id>
-        <link href="https://fyhub.github.io/post/suan-fa-dian-hua-hao-ma-de-zi-mu-zu-he/">
+        <id>https://fyhub1.github.io/post/suan-fa-dian-hua-hao-ma-de-zi-mu-zu-he/</id>
+        <link href="https://fyhub1.github.io/post/suan-fa-dian-hua-hao-ma-de-zi-mu-zu-he/">
         </link>
         <updated>2021-04-01T11:02:56.000Z</updated>
         <content type="html"><![CDATA[<h1 id="题目">题目</h1>
 <p>给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。</p>
 <p>给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。<br>
-<img src="https://fyhub.github.io/post-images/1617275101520.png" alt="" loading="lazy"></p>
+<img src="https://fyhub1.github.io/post-images/1617275101520.png" alt="" loading="lazy"></p>
 <p>示例 1：</p>
 <pre><code>输入：digits = &quot;23&quot;
 输出：[&quot;ad&quot;,&quot;ae&quot;,&quot;af&quot;,&quot;bd&quot;,&quot;be&quot;,&quot;bf&quot;,&quot;cd&quot;,&quot;ce&quot;,&quot;cf&quot;]
@@ -69,8 +69,8 @@ var letterCombinations = function(digits) {
     </entry>
     <entry>
         <title type="html"><![CDATA[【算法】分割回文串]]></title>
-        <id>https://fyhub.github.io/post/suan-fa-fen-ge-hui-wen-chuan/</id>
-        <link href="https://fyhub.github.io/post/suan-fa-fen-ge-hui-wen-chuan/">
+        <id>https://fyhub1.github.io/post/suan-fa-fen-ge-hui-wen-chuan/</id>
+        <link href="https://fyhub1.github.io/post/suan-fa-fen-ge-hui-wen-chuan/">
         </link>
         <updated>2021-04-01T11:02:20.000Z</updated>
         <content type="html"><![CDATA[<h1 id="题目">题目</h1>
